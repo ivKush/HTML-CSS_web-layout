@@ -20,7 +20,7 @@ a {
     color: coral;
     font-style: normal; 
     font-weight: 700; /* шрифт насыщенность */
-    font-size: 36px;
+    font-size: 36px; /* размер шришта */
     line-height: 80px; /* межстрочный интервал */
 }
 
