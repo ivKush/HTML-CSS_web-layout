@@ -117,6 +117,11 @@ body {
     border: 2px solid #3A68B8;
 }
 
+.btn:active {
+    font-size: 15px;
+    margin-right: 47.5px;
+}
+
 .main-left {
     display: flex;
     align-items: stretch;
@@ -141,8 +146,16 @@ body {
 
 .content1 {
     display: flex;
-    justify-content: space-between;
     gap: 68px;
+    align-items: center;
+}
+
+.content1-left {
+    width: 100%;
+}
+
+.content1-img {
+    width: 100%;
 }
 
 .content1-title {
@@ -164,7 +177,6 @@ body {
     font-weight: 600;
     line-height: 160%;
     opacity: 0.7;
-    margin-right: 24px;
     margin-bottom: 50px;
 }
 
@@ -183,9 +195,15 @@ body {
     gap: 10px;
 }
 
-.content1-right {
-    display: flex;
-    align-items: center;
+.content1-btn:hover {
+    color: #3A68B8;
+    background-color: #fff;
+    border: 2px solid #3A68B8;
+}
+
+.content1-btn:active {
+    font-size: 15px;
+    margin-bottom: 2px;
 }
 
 .grid {
@@ -353,6 +371,11 @@ body {
 }
 
 .icon:hover {
+    /* color: #5c87d1; */
+    transform: scale(1.2);
+}
+
+.icon:active {
     color: #5c87d1;
 }
 
@@ -370,6 +393,15 @@ body {
         margin-bottom: 200px; */
         flex-direction: column;
         align-items: center;
+    }
+
+    .main-title {
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    .main-dsc {
+        width: 72%;
     }
 
     .logos {
@@ -392,8 +424,10 @@ body {
     .content1 {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        /* gap: 68px; */
+    }
+
+    .content1-left {
+        width: auto;
     }
 
     .content1-right {
@@ -429,6 +463,17 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .content3-title {
+        color: var(--ffffff, #FFF);
+        font-family: Open Sans;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        /* 52px */
+        text-align: center;
     }
 
     .footer {
@@ -506,6 +551,7 @@ body {
         line-height: 160%;
         /* 28.8px */
         margin-bottom: 39px;
+        width: 99%;
     }
 
     .main-btn {
@@ -535,6 +581,9 @@ body {
     .content1-right {
         width: 100%;
         margin-bottom: 96px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .content1-text {
@@ -552,8 +601,6 @@ body {
         font-style: normal;
         font-weight: 700;
         line-height: 130%;
-        /* 31.2px */
-        margin: 0;
     }
 
     .dsc2 {
@@ -564,8 +611,6 @@ body {
         font-style: normal;
         font-weight: 600;
         line-height: 160%;
-        /* 25.6px */
-        margin: 0;
     }
 
     .grid {
@@ -634,6 +679,7 @@ body {
     .footer {
         gap: 32px;
         margin-bottom: 64px;
+        margin-top: 0;
     }
 
     .footer-title {
