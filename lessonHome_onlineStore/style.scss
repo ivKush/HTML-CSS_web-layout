@@ -1,6 +1,4 @@
-$ColorSelectSite: #F16D7F;
-$widthSite: 1140px;
-$hoverIcon: scale(1, 1.2);
+@import 'vars';
 
 * {
     padding: 0;
@@ -13,7 +11,6 @@ a {
 
 body {
     font-family: 'Lato', sans-serif;
-    max-width: 1600px;
 }
 
 .centering {
@@ -56,49 +53,45 @@ body {
     gap: 63px;
     background: #F1E4E6;
     margin-bottom: 65px;
+
+    &_img {
+        width: 50%;
+    }
+
+    &_heading {
+        display: flex;
+        gap: 10px;
+
+        &_text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &_h1 {
+            color: #222;
+            font-family: Lato;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+        }
+
+        &_h2 {
+            color: #222;
+            font-family: Lato;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    &_selectiv {
+        color: $ColorSelectSite;
+    }
 }
 
-.img_main {
-    width: 50%;
-}
-
-.main_heading {
-    display: flex;
-    gap: 10px;
-}
-
-.main_heading_text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.main_heading_h1 {
-    color: #222;
-    font-family: Lato;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-
-}
-
-.main_heading_h2 {
-    color: #222;
-    font-family: Lato;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
-    // &_unic_text {
-    //     color: $ColorSelectSite;
-    // }
-}
-
-.main_selectiv {
-    color: $ColorSelectSite;
-}
 
 .nav_lists {
     display: flex;
@@ -126,73 +119,83 @@ body {
     }
 }
 
-.promo_heding {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
+.product_heding {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 48px;
 
     &_h1 {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
         color: #222;
         font-size: 30px;
     }
 
     &_text {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
         color: #9F9F9F;
         font-size: 14px;
     }
 }
 
-.promo {
+%fontProduct {
+    font-family: Lato;
+    font-style: normal;
+    line-height: normal;
+}
+
+.product {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 48px;
-}
 
-.promo_card {
-    max-width: calc(($widthSite - 60px) / 3);
+    &_card {
+        max-width: calc(($widthSite - 60px) / 3);
+        background-color: #F8F8F8;
+        
+        &_img {
+            width: 100%;
+        }
 
-    background-color: #F8F8F8;
-    ;
-    font-family: Lato;
-    font-style: normal;
-    line-height: normal;
+        &_title {
+            @extend %fontProduct;
+            color: #222;
+            font-size: 13px;
+            font-weight: 400;
+            margin-top: 25px;
+            margin-bottom: 13px;
+            padding-left: 18px;
+        }
 
-    &_title {
-        color: #222;
-        font-size: 13px;
-        font-weight: 400;
-        margin-top: 25px;
-        margin-bottom: 13px;
-        padding-left: 18px;
-    }
+        &_text {
+            @extend %fontProduct;
+            color: #5D5D5D;
+            font-size: 14px;
+            font-weight: 300;
+            padding-left: 18px;
+        }
 
-    &_text {
-        color: #5D5D5D;
-        font-size: 14px;
-        font-weight: 300;
-        padding-left: 18px;
-    }
-
-    &_price {
-        color: #F16D7F;
-        font-size: 16px;
-        font-weight: 400;
-        margin-top: 18px;
-        margin-bottom: 20px;
-        padding-left: 18px;
+        &_price {
+            @extend %fontProduct;
+            color: $ColorSelectSite;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 18px;
+            margin-bottom: 20px;
+            padding-left: 18px;
+        }
     }
 }
 
 .button_product {
-    
-    color: #F26376;
+    color: $ColorSelectSite;
     font-family: Lato;
     font-size: 16px;
     font-style: normal;
