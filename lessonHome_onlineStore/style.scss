@@ -62,18 +62,18 @@ body {
     width: 50%;
 }
 
-.heading {
+.main_heading {
     display: flex;
     gap: 10px;
 }
 
-.heading_text {
+.main_heading_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.headind_h1 {
+.main_heading_h1 {
     color: #222;
     font-family: Lato;
     font-size: 48px;
@@ -83,7 +83,7 @@ body {
 
 }
 
-.headind_h2 {
+.main_heading_h2 {
     color: #222;
     font-family: Lato;
     font-size: 32px;
@@ -96,7 +96,7 @@ body {
     // }
 }
 
-.heading_h2_unic_text {
+.main_selectiv {
     color: $ColorSelectSite;
 }
 
@@ -107,32 +107,95 @@ body {
     margin-bottom: 96px;
 }
 
-// .all_box {
-//     background-color: rgba(33, 22, 22, 0.70);
-// }
-
-.nav_list {
-    background: rgba(33, 22, 22, 0.70);
-}
-
-.box_text {
-
-}
-
-.nav_text {
-    color: #000;
-    // color: #FFF;
+.nav_box_text {
+    color: #FFF;
     text-align: center;
     font-family: Lato;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    display: flex;
 
-    &_unic {
+    display: flex;
+    flex-direction: column;
+
+    &_selectiv {
         color: $ColorSelectSite;
         font-size: 24px;
         font-weight: 700;
     }
+}
+
+.promo_heding {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 48px;
+
+    &_h1 {
+        color: #222;
+        font-size: 30px;
+    }
+
+    &_text {
+        color: #9F9F9F;
+        font-size: 14px;
+    }
+}
+
+.promo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 48px;
+}
+
+.promo_card {
+    max-width: calc(($widthSite - 60px) / 3);
+
+    background-color: #F8F8F8;
+    ;
+    font-family: Lato;
+    font-style: normal;
+    line-height: normal;
+
+    &_title {
+        color: #222;
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 25px;
+        margin-bottom: 13px;
+        padding-left: 18px;
+    }
+
+    &_text {
+        color: #5D5D5D;
+        font-size: 14px;
+        font-weight: 300;
+        padding-left: 18px;
+    }
+
+    &_price {
+        color: #F16D7F;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 18px;
+        margin-bottom: 20px;
+        padding-left: 18px;
+    }
+}
+
+.button_product {
+    
+    color: #F26376;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }

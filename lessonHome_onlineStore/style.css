@@ -58,18 +58,18 @@ body {
   width: 50%;
 }
 
-.heading {
+.main_heading {
   display: flex;
   gap: 10px;
 }
 
-.heading_text {
+.main_heading_text {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.headind_h1 {
+.main_heading_h1 {
   color: #222;
   font-family: Lato;
   font-size: 48px;
@@ -78,7 +78,7 @@ body {
   line-height: normal;
 }
 
-.headind_h2 {
+.main_heading_h2 {
   color: #222;
   font-family: Lato;
   font-size: 32px;
@@ -87,7 +87,7 @@ body {
   line-height: normal;
 }
 
-.heading_h2_unic_text {
+.main_selectiv {
   color: #F16D7F;
 }
 
@@ -98,12 +98,8 @@ body {
   margin-bottom: 96px;
 }
 
-.nav_list {
-  background: rgba(33, 22, 22, 0.7);
-}
-
-.nav_text {
-  color: #000;
+.nav_box_text {
+  color: #FFF;
   text-align: center;
   font-family: Lato;
   font-size: 16px;
@@ -111,9 +107,75 @@ body {
   font-weight: 400;
   line-height: normal;
   display: flex;
+  flex-direction: column;
 }
-.nav_text_unic {
+.nav_box_text_selectiv {
   color: #F16D7F;
   font-size: 24px;
   font-weight: 700;
+}
+
+.promo_heding {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.promo_heding_h1 {
+  color: #222;
+  font-size: 30px;
+}
+.promo_heding_text {
+  color: #9F9F9F;
+  font-size: 14px;
+}
+
+.promo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 48px;
+}
+
+.promo_card {
+  max-width: 360px;
+  background-color: #F8F8F8;
+  font-family: Lato;
+  font-style: normal;
+  line-height: normal;
+}
+.promo_card_title {
+  color: #222;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 25px;
+  margin-bottom: 13px;
+  padding-left: 18px;
+}
+.promo_card_text {
+  color: #5D5D5D;
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 18px;
+}
+.promo_card_price {
+  color: #F16D7F;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 18px;
+  margin-bottom: 20px;
+  padding-left: 18px;
+}
+
+.button_product {
+  color: #F26376;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=style.css.map */
