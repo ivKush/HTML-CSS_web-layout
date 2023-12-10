@@ -96,9 +96,15 @@ body {
   background-color: rgba(33, 22, 22, 0.6980392157);
 }
 
-.nav_box_text {
+.nav_box {
   position: relative;
-  bottom: 160px;
+}
+
+.nav_box_text {
+  position: absolute;
+  bottom: 110px;
+  left: 120px;
+  z-index: 2;
   color: #FFF;
   text-align: center;
   font-family: Lato;
@@ -110,8 +116,10 @@ body {
   flex-direction: column;
 }
 .nav_box_text_big {
-  position: relative;
-  bottom: 125px;
+  position: absolute;
+  z-index: 2;
+  bottom: 90px;
+  left: 470px;
   color: #FFF;
   text-align: center;
   font-family: Lato;
