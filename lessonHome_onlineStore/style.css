@@ -37,10 +37,18 @@ body {
   align-items: flex-end;
 }
 
-.headNav_rigth {
+.headNav_right {
   display: flex;
   gap: 33px;
   align-items: flex-end;
+}
+.headNav_right_basket_box {
+  position: relative;
+}
+.headNav_right_basket_num {
+  position: absolute;
+  right: -9px;
+  bottom: 15px;
 }
 
 .main {
@@ -85,26 +93,20 @@ body {
 
 .nav_lists {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 96px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.nav_list {
-  background-color: rgba(33, 22, 22, 0.6980392157);
 }
 
 .nav_box {
   position: relative;
+  display: flex;
 }
-
 .nav_box_text {
   position: absolute;
-  bottom: 110px;
-  left: 120px;
-  z-index: 2;
+  left: 10cqb;
+  bottom: 9cqh;
+  z-index: 3;
   color: #FFF;
   text-align: center;
   font-family: Lato;
@@ -117,9 +119,9 @@ body {
 }
 .nav_box_text_big {
   position: absolute;
-  z-index: 2;
-  bottom: 90px;
-  left: 470px;
+  z-index: 3;
+  left: calc((100% - 150px) / 2);
+  bottom: calc((100% - 50px) / 2);
   color: #FFF;
   text-align: center;
   font-family: Lato;
@@ -134,6 +136,10 @@ body {
   color: #F16D7F;
   font-size: 24px;
   font-weight: 700;
+}
+
+.nav_list_dark {
+  position: absolute;
 }
 
 .product_heding {
@@ -273,6 +279,12 @@ body {
 }
 .subscribe_text {
   text-align: center;
+  color: #222224;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
 }
 .subscribe_right {
   display: flex;
@@ -292,8 +304,8 @@ body {
 }
 .subscribe_title {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   color: #222224;
   font-family: Lato;
   font-size: 18px;
@@ -304,9 +316,12 @@ body {
 .subscribe_forma {
   display: flex;
   width: 100%;
-  justify-content: space-between;
 }
 .subscribe_forma_infield {
+  width: 70%;
+  text-align: start;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   padding: 20px;
   color: #222224;
   font-family: Lato;
@@ -316,6 +331,10 @@ body {
   line-height: normal;
 }
 .subscribe_forma_text {
+  width: 30%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 20px;
   background: #F16D7F;
   color: #FFF;
   text-align: center;
