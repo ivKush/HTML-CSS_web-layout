@@ -9,6 +9,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    opacity: 0.6;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -16,10 +20,6 @@ body {
 .centering {
     padding-left: calc(50% - $widthSite/2);
     padding-right: calc(50% - $widthSite/2);
-}
-
-.hoverHead:hover {
-    transform: $hoverIcon;
 }
 
 .styleHeader {
@@ -49,13 +49,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    justify-items: flex-start;
     gap: 63px;
     background: #F1E4E6;
     margin-bottom: 65px;
 
     &_img {
-        width: 50%;
+        margin-left: calc(50% - 570px - 230px);
     }
 
     &_heading {
@@ -94,13 +93,27 @@ body {
 
 
 .nav_lists {
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 30px;
+    // margin-bottom: 96px;
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 96px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav_list {
+    background-color: #211616B2;
+
 }
 
 .nav_box_text {
+    position: relative;
+    bottom: 160px;
+
     color: #FFF;
     text-align: center;
     font-family: Lato;
@@ -111,6 +124,22 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    &_big {
+        position: relative;
+        bottom: 125px;
+
+        color: #FFF;
+        text-align: center;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        display: flex;
+        flex-direction: column;
+    }
 
     &_selectiv {
         color: $ColorSelectSite;
@@ -159,7 +188,7 @@ body {
     &_card {
         max-width: calc(($widthSite - 60px) / 3);
         background-color: #F8F8F8;
-        
+
         &_img {
             width: 100%;
         }
@@ -194,11 +223,146 @@ body {
     }
 }
 
-.button_product {
-    color: $ColorSelectSite;
+.product_btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 95px;
+}
+
+.button_AllProduct {
+    border: solid 1px;
+    padding: 15px 40px;
+    color: #F26376;
     font-family: Lato;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.promo {
+    background: #222224;
+    padding-top: 104px;
+    padding-bottom: 104px;
+    display: flex;
+
+    &_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &_img {
+        margin-bottom: 25px;
+
+        &_2 {
+            margin-bottom: 19px;
+        }
+    }
+
+    &_title {
+        margin-bottom: 16px;
+        color: #FBFBFB;
+        font-family: Lato;
+        font-size: 19.96px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_text {
+        padding: 0 25px;
+        color: #FBFBFB;
+        text-align: center;
+        font-family: Lato;
+        font-size: 13.972px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        opacity: 0.5;
+    }
+}
+
+.subscribe {
+    display: flex;
+    gap: 223px;
+    padding-top: 97px;
+    padding-bottom: 126px;
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // gap: 30px;
+        width: 60%;
+    }
+
+    &_img {
+        margin-bottom: 30px;
+    }
+
+    &_text {
+        text-align: center;
+    }
+
+    &_right {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &_big {
+        text-align: center;
+        color: #222224;
+        text-align: center;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 167.2%;
+    }
+
+    &_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #222224;
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 167.2%;
+    }
+
+    &_forma {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        &_infield {
+            padding: 20px;
+            color: #222224;
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &_text {
+            background: $ColorSelectSite;
+            color: #FFF;
+            text-align: center;
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+
 }
