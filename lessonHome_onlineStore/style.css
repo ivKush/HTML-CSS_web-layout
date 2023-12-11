@@ -46,8 +46,8 @@ body {
   position: relative;
 }
 .headNav_right_basket_num {
-  position: absolute;
-  right: -9px;
+  position: relative;
+  right: 15px;
   bottom: 15px;
 }
 
@@ -104,8 +104,10 @@ body {
 }
 .nav_box_text {
   position: absolute;
-  left: 10cqb;
-  bottom: 9cqh;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  top: 5%;
   z-index: 3;
   color: #FFF;
   text-align: center;
@@ -116,6 +118,7 @@ body {
   line-height: normal;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .nav_box_text_big {
   position: absolute;
@@ -272,7 +275,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 40%;
 }
 .subscribe_img {
   margin-bottom: 30px;
@@ -288,9 +291,11 @@ body {
 }
 .subscribe_right {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: flex-end;
+  width: 60%;
   align-items: center;
-  justify-content: center;
 }
 .subscribe_big {
   text-align: center;
@@ -304,7 +309,7 @@ body {
 }
 .subscribe_title {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   color: #222224;
   font-family: Lato;
@@ -314,24 +319,21 @@ body {
   line-height: 167.2%;
 }
 .subscribe_forma {
-  display: flex;
-  width: 100%;
-}
-.subscribe_forma_infield {
-  width: 70%;
-  text-align: start;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  padding: 20px;
   color: #222224;
   font-family: Lato;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: flex;
+  justify-content: center;
+}
+.subscribe_forma_infield {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 20px;
 }
 .subscribe_forma_text {
-  width: 30%;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   padding: 20px;
