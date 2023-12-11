@@ -298,7 +298,29 @@ body {
     }
 }
 
+/* Наложение фона используя напрямую img + позиции z-index
+
+.subscribeBackground {
+    position: relative;
+}
+
+.back_img {
+    position: absolute;
+}
+
+.back_transparent {
+    position: absolute;
+}*/
+
 .subscribe {
+    // position: absolute;
+    background-image: url(img/Subscribe_backgraund1.png),
+        url(img/subscribeBackground.png);
+    // background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
     display: flex;
     gap: 223px;
     padding-top: 97px;
@@ -388,6 +410,37 @@ body {
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+        }
+    }
+}
+
+.footer {
+    background: #222224;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &_left_text {
+        color: #FBFBFB;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_rigth {
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+
+        &_icon {
+            border: solid;
+            padding: 8px;
+            background: #FFF;
+            color: #222;
         }
     }
 }
