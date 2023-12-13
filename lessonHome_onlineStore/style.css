@@ -546,4 +546,8 @@ body {
   align-items: center;
   gap: 10px;
   color: #F26376;
+}
+.currentProduct-button:hover {
+  background-color: rgba(239, 91, 112, 0.4);
+  color: #FFF;
 }/*# sourceMappingURL=style.css.map */

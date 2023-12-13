@@ -568,4 +568,9 @@ body {
         gap: 10px;
         color: #F26376;
     }
+
+    &-button:hover {
+        background-color: rgba($color: #EF5B70, $alpha: 0.4);
+        color: #FFF;
+    }
 }
