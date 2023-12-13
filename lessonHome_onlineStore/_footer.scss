@@ -1,0 +1,30 @@
+@import "vars";
+
+.footer {
+    background: $colorStyleHeaderPromoFooter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &_left_text {
+        color: #FBFBFB;
+        font-size: 16px;
+        font-weight: 400;
+        @extend %fontProduct
+    }
+
+    &_rigth {
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+
+        &_icon {
+            border: solid;
+            padding: 8px;
+            background: #FFF;
+            color: #222;
+        }
+    }
+}

@@ -1,9 +1,50 @@
-@import 'vars';
+@import "vars";
+@import "mixins";
+@import "extends"; // ??? при каждом импорте в папки добавляются/дублируются селекторы наследования в CSS ???
+@import "header";
+@import "footer";
 
 * {
     padding: 0;
     margin: 0;
 }
+
+// Замена оптимизатору или (👆)общему обнулению - от преподавателя.
+// сломал страницу - причину не искал
+/*
+html,
+body,
+div,
+img,
+a,
+hr,
+table,
+tr,
+td,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea,
+button {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    outline: none;
+    vertical-align: top;
+    transition: none;
+}
+*/
 
 a {
     text-decoration: none;
@@ -18,41 +59,7 @@ body {
 }
 
 .centering {
-    padding-left: calc(50% - $widthSite/2);
-    padding-right: calc(50% - $widthSite/2);
-}
-
-.styleHeader {
-    background-color: #222;
-}
-
-.headNav {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 18px;
-    padding-bottom: 19px;
-}
-
-.headNav_left {
-    display: flex;
-    gap: 41px;
-    align-items: flex-end;
-}
-
-.headNav_right {
-    display: flex;
-    gap: 33px;
-    align-items: flex-end;
-
-    &_basket_box {
-        position: relative;
-    }
-
-    &_basket_num {
-        position: relative;
-        right: 15px;
-        bottom: 15px;
-    }
+    @include centering($widthSiteDesctop);
 }
 
 .main {
@@ -187,12 +194,6 @@ body {
     }
 }
 
-%fontProduct {
-    font-family: Lato;
-    font-style: normal;
-    line-height: normal;
-}
-
 .product {
     display: flex;
     flex-wrap: wrap;
@@ -200,7 +201,7 @@ body {
     margin-bottom: 48px;
 
     &_card {
-        max-width: calc(($widthSite - 60px) / 3);
+        max-width: calc(($widthSiteDesctop - 60px) / 3);
         background-color: #F8F8F8;
 
         &_img {
@@ -298,7 +299,8 @@ body {
     }
 }
 
-/* Наложение фона используя напрямую img + позиции z-index
+/*
+// Создание фона используя напрямую img + позиции z-index
 
 .subscribeBackground {
     position: relative;
@@ -310,14 +312,21 @@ body {
 
 .back_transparent {
     position: absolute;
-}*/
+}
+*/
 
 .subscribe {
     // position: absolute;
+
+    background-image: linear-gradient(to bottom, rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(img/subscribeBackground.png);
+
+    /*
+    // Создание фона путем наложения двух img в backgraund-е                   
+    
     background-image: url(img/Subscribe_backgraund1.png),
         url(img/subscribeBackground.png);
-    // background-color: transparent;
-    background-repeat: no-repeat;
+    */
+
     background-size: cover;
     background-position: bottom;
 
@@ -414,33 +423,149 @@ body {
     }
 }
 
-.footer {
-    background: #222224;
+
+
+.page_heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8F3F4;
+
+    &_title {
+        margin: 60px 0;
+        color: $ColorSelectSite;
+        @extend %fontProduct;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    &_breadCrumbs {
+        margin: 66px 0;
+
+
+        &_text {
+            color: #636363;
+            @extend %fontProduct;
+            font-size: 14px;
+            font-weight: 300;
+
+            &_unic {
+                color: $ColorSelectSite;
+                font-size: 14px;
+                font-weight: 700;
+                @extend %fontProduct;
+            }
+        }
+    }
+}
+
+.carusel {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    background-color: #F7F7F7;
 
-    &_left_text {
-        color: #FBFBFB;
-        font-family: Lato;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+    &_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 40px;
+        width: 40px;
+        background-color: #2A2A2A26;
     }
 
-    &_rigth {
-        display: flex;
-        gap: 8px;
-        padding: 8px;
+    &_item:hover {
+        color: $ColorSelectSite;
+    }
+}
 
-        &_icon {
-            border: solid;
-            padding: 8px;
-            background: #FFF;
-            color: #222;
+.fa-xl {
+    font-size: x-large;
+}
+
+.offer {
+    position: relative;
+    bottom: 45px;
+    z-index: 2;    
+}
+
+.otherProduct {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 128px;
+    margin-bottom: 80px;
+}
+
+.currentProduct {
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: solid 1px #EAEAEA;
+    padding: 64px 0;
+
+    &-title {
+        color: $ColorSelectSite;
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 12px;
+        @extend %fontProduct;
+    }
+
+    &-name {
+        margin-top: 12px;
+        margin-bottom: 48px;
+        color: #4D4D4D;
+        font-size: 18px;
+        font-weight: 300;
+        @extend %fontProduct;
+    }
+
+    &-text {
+        padding: 0 293px;
+        margin-bottom: 32px;
+
+        color: #5E5E5E;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        @extend %fontProduct;
+    }
+
+    &-price {
+        color: #EF5B70;
+        font-size: 24px;
+        font-weight: 300;
+        @extend %fontProduct;
+        margin-bottom: 65px;
+    }
+
+    &-option {
+        display: flex;
+        gap: 23px;
+        margin-top: 64px;
+        margin-bottom: 48px;
+        color: #6F6E6E;
+        font-size: 14px;
+        font-weight: 400;
+        @extend %fontProduct;
+
+        &-color {
+            display: flex;
+            gap: 10px;
         }
+    }
+
+    &-button {
+        background-color: #FFFFFF;
+        border-color: #EF5B70;
+        padding: 12px 43px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #F26376;
     }
 }

@@ -1,0 +1,11 @@
+@import "vars";
+
+@mixin centering($widthSite) {
+    padding-left: calc(50% - $widthSite/2);
+    padding-right: calc(50% - $widthSite/2);
+}
+
+@mixin backColorHeaderPromoFooter() {
+    background: $colorStyleHeaderPromoFooter;
+}
+
