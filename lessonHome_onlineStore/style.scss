@@ -50,6 +50,18 @@ a {
     text-decoration: none;
 }
 
+details {
+    cursor: pointer;
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
 a:hover {
     opacity: 0.6;
 }
@@ -318,7 +330,7 @@ body {
 .subscribe {
     // position: absolute;
 
-    background-image: linear-gradient(to bottom, rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(img/subscribeBackground.png);
+    background-image: linear-gradient(to bottom, rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), $subscribeBackground;
 
     /*
     // Создание фона путем наложения двух img в backgraund-е                   
@@ -357,9 +369,7 @@ body {
     }
 
     &_right {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
+        @include flexColumn(32px);
         justify-content: flex-end;
         width: 60%;
         align-items: center;
@@ -399,7 +409,6 @@ body {
 
         display: flex;
         justify-content: center;
-        // width: 100%;
 
         &_infield {
             border-top-left-radius: 30px;
@@ -422,8 +431,6 @@ body {
         }
     }
 }
-
-
 
 .page_heading {
     display: flex;
@@ -486,7 +493,7 @@ body {
 .offer {
     position: relative;
     bottom: 45px;
-    z-index: 2;    
+    z-index: 2;
 }
 
 .otherProduct {
@@ -498,8 +505,6 @@ body {
 }
 
 .currentProduct {
-    
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -536,7 +541,7 @@ body {
     }
 
     &-price {
-        color: #EF5B70;
+        color: $ColorSelectSite;
         font-size: 24px;
         font-weight: 300;
         @extend %fontProduct;
@@ -548,7 +553,7 @@ body {
         gap: 23px;
         margin-top: 64px;
         margin-bottom: 48px;
-        color: #6F6E6E;
+        color: $colorText;
         font-size: 14px;
         font-weight: 400;
         @extend %fontProduct;
@@ -561,7 +566,7 @@ body {
 
     &-button {
         background-color: #FFFFFF;
-        border-color: #EF5B70;
+        border-color: $ColorSelectSite;
         padding: 12px 43px;
         display: flex;
         align-items: center;
@@ -570,7 +575,133 @@ body {
     }
 
     &-button:hover {
-        background-color: rgba($color: #EF5B70, $alpha: 0.4);
+        background-color: rgba($color: $ColorSelectSite, $alpha: 0.4);
         color: #FFF;
+    }
+}
+
+.filter {
+    display: flex;
+    gap: 30px;
+    padding-top: 51px;
+    padding-bottom: 65px;
+
+    &-items {
+        display: flex;
+        gap: 28px;
+        width: calc(($widthSiteDesctop - 60px) / 3);
+        position: relative;
+
+        &-category {
+
+            /* Стилизация details  в развернутом виде */
+            &[open] {
+                position: absolute;
+                background-color: #FFFFFF;
+                color: $colorText;
+                font-size: 14px;
+                font-weight: 600;
+                @extend %fontProduct;
+                width: 100%;
+                box-shadow: 2px 2px 20px;
+                padding: 17px;
+                box-sizing: border-box;
+                z-index: 3;
+            }
+
+            &-summary:hover {
+                color: $ColorSelectSite;
+            }
+
+            /* Смена цвета svg в path при наведении курсора */
+            & path:hover {
+                fill: $ColorSelectSite;
+            }
+
+            /* [open] - для стилизации details в открытом состоянии */
+            &[open] &-summary {
+                color: $ColorSelectSite;
+            }
+
+            /* смена цвета svg в fill возможна, если напрямую прописана в html
+через передачу в html картинкой не получается  */
+            &[open] path {
+                fill: $ColorSelectSite;
+            }
+
+            &-summary {
+                display: flex;
+                gap: 10px;
+            }
+
+            &-subcategory:hover {
+                color: $ColorSelectSite;
+            }
+
+            &-subcategory {
+                color: $colorText;
+                font-size: 14px;
+                font-weight: 400;
+                @extend %fontProduct;
+
+                @include flexColumn(16px);
+                padding-top: 18px;
+                padding-left: 20px;
+
+                &-summary {
+                    border-left: 5px solid $ColorSelectSite;
+                    padding: 10px;
+                    border-bottom: 1px solid #EBEBEB;
+                }
+
+                &-elements {
+                    @include flexColumn(11px);
+                    padding: 14px 12px;
+
+                    &-el {
+                        color: $colorText;
+                        font-size: 14px;
+                        font-weight: 400;
+                        @extend %fontProduct;
+                    }
+
+                    &-el:hover {
+                        color: $ColorSelectSite;
+                    }
+                }
+            }
+        }
+
+        &-box {
+            position: relative;
+            color: $colorText;
+            font-size: 14px;
+            font-weight: 400;
+            @extend %fontProduct;
+
+            &-details {
+                &-summary {
+                    padding-left: 5px;
+                    padding-bottom: 2px;
+                }
+
+                &-pre_part {
+                    position: absolute;
+                    padding: 6px;
+                    background: #FFF;
+                    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+                    top: 22px;
+                    right: -7px;
+                    z-index: 3;
+                }
+
+                &-part {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 9px;
+                    margin: 9px;
+                }
+            }
+        }
     }
 }

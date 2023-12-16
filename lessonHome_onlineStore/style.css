@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs_text_unic, .page_heading_breadCrumbs_text, .page_heading_title, .product_card_price, .product_card_text, .product_card_title, .footer_left_text {
+.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs_text_unic, .page_heading_breadCrumbs_text, .page_heading_title, .product_card_price, .product_card_text, .product_card_title, .footer_left_text {
   font-family: Lato;
   font-style: normal;
   line-height: normal;
@@ -100,6 +100,18 @@ button {
 */
 a {
   text-decoration: none;
+}
+
+details {
+  cursor: pointer;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 a:hover {
@@ -520,7 +532,7 @@ body {
   font-weight: 300;
 }
 .currentProduct-price {
-  color: #EF5B70;
+  color: #F16D7F;
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 65px;
@@ -540,7 +552,7 @@ body {
 }
 .currentProduct-button {
   background-color: #FFFFFF;
-  border-color: #EF5B70;
+  border-color: #F16D7F;
   padding: 12px 43px;
   display: flex;
   align-items: center;
@@ -548,6 +560,111 @@ body {
   color: #F26376;
 }
 .currentProduct-button:hover {
-  background-color: rgba(239, 91, 112, 0.4);
+  background-color: rgba(241, 109, 127, 0.4);
   color: #FFF;
+}
+
+.filter {
+  display: flex;
+  gap: 30px;
+  padding-top: 51px;
+  padding-bottom: 65px;
+}
+.filter-items {
+  display: flex;
+  gap: 28px;
+  width: 360px;
+  position: relative;
+}
+.filter-items-category {
+  /* Стилизация details  в развернутом виде */
+  /* Смена цвета svg в path при наведении курсора */
+  /* [open] - для стилизации details в открытом состоянии */
+  /* смена цвета svg в fill возможна, если напрямую прописана в html
+  через передачу в html картинкой не получается  */
+}
+.filter-items-category[open] {
+  position: absolute;
+  background-color: #FFFFFF;
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  box-shadow: 2px 2px 20px;
+  padding: 17px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.filter-items-category-summary:hover {
+  color: #F16D7F;
+}
+.filter-items-category path:hover {
+  fill: #F16D7F;
+}
+.filter-items-category[open] .filter-items-category-summary {
+  color: #F16D7F;
+}
+.filter-items-category[open] path {
+  fill: #F16D7F;
+}
+.filter-items-category-summary {
+  display: flex;
+  gap: 10px;
+}
+.filter-items-category-subcategory:hover {
+  color: #F16D7F;
+}
+.filter-items-category-subcategory {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 18px;
+  padding-left: 20px;
+}
+.filter-items-category-subcategory-summary {
+  border-left: 5px solid #F16D7F;
+  padding: 10px;
+  border-bottom: 1px solid #EBEBEB;
+}
+.filter-items-category-subcategory-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 14px 12px;
+}
+.filter-items-category-subcategory-elements-el {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+}
+.filter-items-category-subcategory-elements-el:hover {
+  color: #F16D7F;
+}
+.filter-items-box {
+  position: relative;
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+}
+.filter-items-box-details-summary {
+  padding-left: 5px;
+  padding-bottom: 2px;
+}
+.filter-items-box-details-pre_part {
+  position: absolute;
+  padding: 6px;
+  background: #FFF;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  top: 22px;
+  right: -7px;
+  z-index: 3;
+}
+.filter-items-box-details-part {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  margin: 9px;
 }/*# sourceMappingURL=style.css.map */

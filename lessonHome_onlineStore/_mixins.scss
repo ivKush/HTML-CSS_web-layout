@@ -5,7 +5,12 @@
     padding-right: calc(50% - $widthSite/2);
 }
 
+@mixin flexColumn($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
 @mixin backColorHeaderPromoFooter() {
     background: $colorStyleHeaderPromoFooter;
 }
-

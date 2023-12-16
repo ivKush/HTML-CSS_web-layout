@@ -1,0 +1,73 @@
+            
+            position: absolute;
+            background-color: #FFFFFF;
+            color: $colorText;
+            font-size: 14px;
+            font-weight: 600;
+            @extend %fontProduct;
+            width: 100%;
+            box-shadow: 2px 2px 20px;
+            padding: 17px;
+            box-sizing: border-box;
+
+            &-summary:hover {
+                color: $ColorSelectSite;
+            }
+
+            /* Смена цвета svg в path при наведении курсора */
+            & path:hover {
+                fill: $ColorSelectSite;
+            }
+
+            /* [open] - для стилизации details в открытом состоянии */
+            &[open] &-summary {
+                color: $ColorSelectSite;
+            }
+
+            /* смена цвета svg в fill возможна, если напрямую прописана в html
+    через передачу в html картинкой не получается  */
+            &[open] path {
+                fill: $ColorSelectSite;
+            }
+
+            &-summary {
+                display: flex;
+                gap: 10px;
+            }
+
+            &-subcategory:hover {
+                color: $ColorSelectSite;
+            }
+
+            &-subcategory {
+                color: $colorText;
+                font-size: 14px;
+                font-weight: 400;
+                @extend %fontProduct;
+
+                @include flexColumn(16px);
+                padding-top: 18px;
+                padding-left: 20px;
+
+                &-summary {
+                    border-left: 5px solid $ColorSelectSite;
+                    padding: 10px;
+                    border-bottom: 1px solid #EBEBEB;
+                }
+                
+                &-elements {
+                    @include flexColumn(11px);
+                    padding: 24px 12px;
+
+                    &-el {
+                        color: $colorText;
+                        font-size: 14px;
+                        font-weight: 400;
+                        @extend %fontProduct;
+                    }
+
+                    &-el:hover {
+                        color: $ColorSelectSite;
+                    }
+                }
+            }
