@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs_text_unic, .page_heading_breadCrumbs_text, .page_heading_title, .subscribe_forma_text, .subscribe_forma, .subscribe_text, .promo_text, .promo_title, .button_AllProduct, .product_card_price, .product_card_text, .product_card_title, .product_heding_text, .product_heding_h1, .nav_box_text_big, .nav_box_text, .main_heading_h2, .main_heading_h1, .footer_left_text {
+.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs_text_unic, .page_heading_breadCrumbs_text, .page_heading_title, .subscribe_forma_text, .subscribe_forma, .subscribe_text, .promo_text, .promo_title, .button_AllProduct, .product_card_price, .product_card_text, .product_card_title, .product_heding_text, .product_heding_h1, .nav_box_text_big, .nav_box_text, .main_heading_h2, .main_heading_h1, .menu-option-elem-text, .menu-option-elem, .menu-option, .menu, .footer_left_text {
   font-family: Lato;
   font-style: normal;
   line-height: normal;
@@ -24,9 +24,6 @@
   display: flex;
   gap: 33px;
   align-items: flex-end;
-}
-.headNav_right_basket_box {
-  position: relative;
 }
 .headNav_right_basket_num {
   position: relative;
@@ -57,6 +54,43 @@
   padding: 8px;
   background: #FFF;
   color: #222;
+}
+
+.BoorgerMenu {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 46px;
+  left: 185px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 32px;
+  background: #FFF;
+  width: 205.2px;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+}
+.menu-option {
+  color: #F16D7F;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+.menu-option-elem {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.menu-option-elem-text {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 * {
