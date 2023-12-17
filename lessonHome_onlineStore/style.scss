@@ -98,20 +98,16 @@ body {
 
         &_h1 {
             color: #222;
-            font-family: Lato;
             font-size: 48px;
-            font-style: normal;
             font-weight: 900;
-            line-height: normal;
+            @extend %fontProduct;
         }
 
         &_h2 {
             color: #222;
-            font-family: Lato;
             font-size: 32px;
-            font-style: normal;
             font-weight: 700;
-            line-height: normal;
+            @extend %fontProduct;
         }
     }
 
@@ -139,13 +135,11 @@ body {
         top: 5%;
         z-index: 3;
 
-        color: #FFF;
+        color: $backgroundGeneral;
         text-align: center;
-        font-family: Lato;
         font-size: 16px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        @extend %fontProduct;
 
         display: flex;
         flex-direction: column;
@@ -157,13 +151,11 @@ body {
             left: calc((100% - 150px) / 2);
             bottom: calc((100% - 50px) / 2);
 
-            color: #FFF;
+            color: $backgroundGeneral;
             text-align: center;
-            font-family: Lato;
             font-size: 16px;
-            font-style: normal;
             font-weight: 400;
-            line-height: normal;
+            @extend %fontProduct;
 
             display: flex;
             flex-direction: column;
@@ -188,19 +180,15 @@ body {
     margin-bottom: 48px;
 
     &_h1 {
-        font-family: Lato;
-        font-style: normal;
+        @extend %fontProduct;
         font-weight: 400;
-        line-height: normal;
         color: #222;
         font-size: 30px;
     }
 
     &_text {
-        font-family: Lato;
-        font-style: normal;
+        @extend %fontProduct;
         font-weight: 400;
-        line-height: normal;
         color: #9F9F9F;
         font-size: 14px;
     }
@@ -260,11 +248,9 @@ body {
     border: solid 1px;
     padding: 15px 40px;
     color: #F26376;
-    font-family: Lato;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    @extend %fontProduct;
 }
 
 .promo {
@@ -291,23 +277,19 @@ body {
     &_title {
         margin-bottom: 16px;
         color: #FBFBFB;
-        font-family: Lato;
         font-size: 19.96px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        @extend %fontProduct;
     }
 
     &_text {
         padding: 0 25px;
         color: #FBFBFB;
         text-align: center;
-        font-family: Lato;
         font-size: 13.972px;
-        font-style: normal;
         font-weight: 300;
-        line-height: normal;
         opacity: 0.5;
+        @extend %fontProduct;
     }
 }
 
@@ -361,11 +343,9 @@ body {
     &_text {
         text-align: center;
         color: #222224;
-        font-family: Lato;
         font-size: 20px;
-        font-style: italic;
         font-weight: 400;
-        line-height: normal;
+        @extend %fontProduct;
     }
 
     &_right {
@@ -380,8 +360,8 @@ body {
         text-align: center;
         color: #222224;
         text-align: center;
-        font-family: Lato;
         font-size: 24px;
+        font-family: Lato;
         font-style: normal;
         font-weight: 700;
         line-height: 167.2%;
@@ -401,11 +381,9 @@ body {
 
     &_forma {
         color: #222224;
-        font-family: Lato;
         font-size: 14px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        @extend %fontProduct;
 
         display: flex;
         justify-content: center;
@@ -421,13 +399,11 @@ body {
             border-bottom-right-radius: 30px;
             padding: 20px;
             background: $ColorSelectSite;
-            color: #FFF;
+            color: $backgroundGeneral;
             text-align: center;
-            font-family: Lato;
             font-size: 14px;
-            font-style: normal;
             font-weight: 400;
-            line-height: normal;
+            @extend %fontProduct;
         }
     }
 }
@@ -508,7 +484,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: $backgroundGeneral;
     border: solid 1px #EAEAEA;
     padding: 64px 0;
 
@@ -565,7 +541,7 @@ body {
     }
 
     &-button {
-        background-color: #FFFFFF;
+        background-color: $backgroundGeneral;
         border-color: $ColorSelectSite;
         padding: 12px 43px;
         display: flex;
@@ -576,7 +552,7 @@ body {
 
     &-button:hover {
         background-color: rgba($color: $ColorSelectSite, $alpha: 0.4);
-        color: #FFF;
+        color: $backgroundGeneral;
     }
 }
 
@@ -592,18 +568,22 @@ body {
         width: calc(($widthSiteDesctop - 60px) / 3);
         position: relative;
 
+        &-box:hover {
+            color: $ColorSelectSite;
+        }
+
         &-category {
 
             /* Стилизация details  в развернутом виде */
             &[open] {
                 position: absolute;
-                background-color: #FFFFFF;
+                background-color: $backgroundGeneral;
                 color: $colorText;
                 font-size: 14px;
                 font-weight: 600;
                 @extend %fontProduct;
                 width: 100%;
-                box-shadow: 2px 2px 20px;
+                box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
                 padding: 17px;
                 box-sizing: border-box;
                 z-index: 3;
@@ -648,10 +628,14 @@ body {
                 padding-top: 18px;
                 padding-left: 20px;
 
+                &[open] {
+                    color: $ColorSelectSite;
+                }
+
                 &-summary {
                     border-left: 5px solid $ColorSelectSite;
                     padding: 10px;
-                    border-bottom: 1px solid #EBEBEB;
+                    border-bottom: 1px solid #EBEBEB;                    
                 }
 
                 &-elements {
@@ -680,6 +664,7 @@ body {
             @extend %fontProduct;
 
             &-details {
+
                 &-summary {
                     padding-left: 5px;
                     padding-bottom: 2px;
@@ -688,7 +673,7 @@ body {
                 &-pre_part {
                     position: absolute;
                     padding: 6px;
-                    background: #FFF;
+                    background: $backgroundGeneral;
                     box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
                     top: 22px;
                     right: -7px;
