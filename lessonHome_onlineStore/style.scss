@@ -569,10 +569,6 @@ body {
         width: calc(($widthSiteDesctop - 60px) / 3);
         position: relative;
 
-        &-box:hover {
-            color: $ColorSelectSite;
-        }
-
         &-category {
 
             /* Стилизация details  в развернутом виде */
@@ -588,6 +584,7 @@ body {
                 padding: 17px;
                 box-sizing: border-box;
                 z-index: 3;
+                top: -18px;
             }
 
             &-summary:hover {
@@ -613,6 +610,11 @@ body {
             &-summary {
                 display: flex;
                 gap: 10px;
+                color: $colorStyleHeaderPromoFooter;
+                font-size: 14px;
+                font-weight: 600;
+                @extend %fontProduct;
+                
             }
 
             &-subcategory:hover {
@@ -636,7 +638,7 @@ body {
                 &-summary {
                     border-left: 5px solid $ColorSelectSite;
                     padding: 10px;
-                    border-bottom: 1px solid #EBEBEB;                    
+                    border-bottom: 1px solid #EBEBEB;
                 }
 
                 &-elements {
@@ -655,6 +657,10 @@ body {
                     }
                 }
             }
+        }
+
+        &-box:hover {
+            color: $ColorSelectSite;
         }
 
         &-box {

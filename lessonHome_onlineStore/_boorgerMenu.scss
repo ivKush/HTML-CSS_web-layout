@@ -19,7 +19,6 @@
 
     box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
 
-
     &-option {
         color: $ColorSelectSite;
         font-size: 14px;
@@ -40,10 +39,7 @@
                 font-size: 14px;
                 font-weight: 400;
                 @extend %fontProduct;
-                
             }
-
         }
-
     }
 }

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs_text_unic, .page_heading_breadCrumbs_text, .page_heading_title, .subscribe_forma_text, .subscribe_forma, .subscribe_text, .promo_text, .promo_title, .button_AllProduct, .product_card_price, .product_card_text, .product_card_title, .product_heding_text, .product_heding_h1, .nav_box_text_big, .nav_box_text, .main_heading_h2, .main_heading_h1, .menu-option-elem-text, .menu-option-elem, .menu-option, .menu, .footer_left_text {
+.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category-summary, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs_text_unic, .page_heading_breadCrumbs_text, .page_heading_title, .subscribe_forma_text, .subscribe_forma, .subscribe_text, .promo_text, .promo_title, .button_AllProduct, .product_card_price, .product_card_text, .product_card_title, .product_heding_text, .product_heding_h1, .nav_box_text_big, .nav_box_text, .main_heading_h2, .main_heading_h1, .menu-option-elem-text, .menu-option-elem, .menu-option, .menu, .footer_left_text {
   font-family: Lato;
   font-style: normal;
   line-height: normal;
@@ -574,9 +574,6 @@ body {
   width: 360px;
   position: relative;
 }
-.filter-items-box:hover {
-  color: #F16D7F;
-}
 .filter-items-category {
   /* Стилизация details  в развернутом виде */
   /* Смена цвета svg в path при наведении курсора */
@@ -595,6 +592,7 @@ body {
   padding: 17px;
   box-sizing: border-box;
   z-index: 3;
+  top: -18px;
 }
 .filter-items-category-summary:hover {
   color: #F16D7F;
@@ -611,6 +609,9 @@ body {
 .filter-items-category-summary {
   display: flex;
   gap: 10px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
 }
 .filter-items-category-subcategory:hover {
   color: #F16D7F;
@@ -645,6 +646,9 @@ body {
   font-weight: 400;
 }
 .filter-items-category-subcategory-elements-el:hover {
+  color: #F16D7F;
+}
+.filter-items-box:hover {
   color: #F16D7F;
 }
 .filter-items-box {
