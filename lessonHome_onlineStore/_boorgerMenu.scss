@@ -3,6 +3,11 @@
 
 .BoorgerMenu {
     position: relative;
+
+    &-summary path:hover {
+        // content: url(icon/iconMenuPink.svg);
+        fill: $ColorSelectSite;
+    }
 }
 
 .menu {

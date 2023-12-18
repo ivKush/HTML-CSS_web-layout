@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category-summary, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs_text_unic, .page_heading_breadCrumbs_text, .page_heading_title, .subscribe_forma_text, .subscribe_forma, .subscribe_text, .promo_text, .promo_title, .button_AllProduct, .product_card_price, .product_card_text, .product_card_title, .product_heding_text, .product_heding_h1, .nav_box_text_big, .nav_box_text, .main_heading_h2, .main_heading_h1, .menu-option-elem-text, .menu-option-elem, .menu-option, .menu, .footer_left_text {
+.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category-summary, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs .unic, .page_heading_breadCrumbs_text, .page_heading_title, .subscribe_forma_text, .subscribe_forma, .subscribe_text, .promo_text, .promo_title, .button_AllProduct, .product_card_price, .product_card_text, .product_card_title, .product_heding_text, .product_heding_h1, .nav_box_text_big, .nav_box_text, .main_heading_h2, .main_heading_h1, .menu-option-elem-text, .menu-option-elem, .menu-option, .menu, .footer_left_text {
   font-family: Lato;
   font-style: normal;
   line-height: normal;
@@ -58,6 +58,9 @@
 
 .BoorgerMenu {
   position: relative;
+}
+.BoorgerMenu-summary path:hover {
+  fill: #F16D7F;
 }
 
 .menu {
@@ -457,10 +460,14 @@ body {
   color: #636363;
   font-size: 14px;
   font-weight: 300;
+  /* Добавление делителя через CSS, через псевдо классы */
+  /* Объединение двух правил выше в одно */
 }
-.page_heading_breadCrumbs_text_unic {
+.page_heading_breadCrumbs_text:not(:last-child)::after {
+  content: " /";
+}
+.page_heading_breadCrumbs .unic {
   color: #F16D7F;
-  font-size: 14px;
   font-weight: 700;
 }
 

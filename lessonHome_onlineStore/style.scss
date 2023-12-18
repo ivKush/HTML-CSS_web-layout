@@ -425,19 +425,31 @@ body {
     &_breadCrumbs {
         margin: 66px 0;
 
-
         &_text {
             color: #636363;
             @extend %fontProduct;
             font-size: 14px;
             font-weight: 300;
 
-            &_unic {
-                color: $ColorSelectSite;
-                font-size: 14px;
-                font-weight: 700;
-                @extend %fontProduct;
+            /* Добавление делителя через CSS, через псевдо классы */
+            // &::after {
+            //     content: " /";
+            // }
+
+            // &:last-child::after {
+            //     content: " ";
+            // }
+
+            /* Объединение двух правил выше в одно */
+            &:not(:last-child)::after {
+                content: " /";
             }
+        }
+
+        .unic {
+            color: $ColorSelectSite;
+            font-weight: 700;
+            @extend %fontProduct;
         }
     }
 }
@@ -614,7 +626,7 @@ body {
                 font-size: 14px;
                 font-weight: 600;
                 @extend %fontProduct;
-                
+
             }
 
             &-subcategory:hover {
