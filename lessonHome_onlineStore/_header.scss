@@ -11,6 +11,10 @@
     padding-top: 18px;
     padding-bottom: 19px;
 
+    .hoverIcon path:hover {
+        fill: $ColorSelectSite;
+    }
+
     &_left {
         display: flex;
         gap: 41px;
