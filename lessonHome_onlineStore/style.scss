@@ -98,14 +98,14 @@ body {
         }
 
         &_h1 {
-            color: #222;
+            color: $colorStyleHeaderPromoFooter;
             font-size: 48px;
             font-weight: 900;
             @extend %fontProduct;
         }
 
         &_h2 {
-            color: #222;
+            color: $colorStyleHeaderPromoFooter;
             font-size: 32px;
             font-weight: 700;
             @extend %fontProduct;
@@ -183,7 +183,7 @@ body {
     &_h1 {
         @extend %fontProduct;
         font-weight: 400;
-        color: #222;
+        color: $colorStyleHeaderPromoFooter;
         font-size: 30px;
     }
 
@@ -194,6 +194,83 @@ body {
         font-size: 14px;
     }
 }
+
+.page_heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8F3F4;
+
+    &_title {
+        margin: 60px 0;
+        color: $ColorSelectSite;
+        @extend %fontProduct;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    &_breadCrumbs {
+        margin: 66px 0;
+
+        &_text {
+            color: #636363;
+            @extend %fontProduct;
+            font-size: 14px;
+            font-weight: 300;
+
+            /* Добавление делителя через CSS, через псевдо классы */
+            // &::after {
+            //     content: " /";
+            // }
+
+            // &:last-child::after {
+            //     content: " ";
+            // }
+
+            /* Объединение двух правил выше в одно */
+            &:not(:last-child)::after {
+                content: " /";
+            }
+        }
+
+        .unic {
+            color: $ColorSelectSite;
+            font-weight: 700;
+            @extend %fontProduct;
+        }
+    }
+}
+
+.cart-heading {
+    background-color: #F8F3F4;
+
+    &-text {
+        padding: 60px 0;
+        color: $ColorSelectSite;
+        font-size: 24px;
+        font-weight: 400;
+        @extend %fontProduct;
+    }
+}
+
+.cart {
+    padding-top: 96px;
+    padding-bottom: 128px;
+    display: flex;
+    gap: 128px;
+
+    &-left {
+        width: 64.5%;
+    }
+
+    &-rigth {
+        width: 35.5%;
+    }
+
+    &-imgBox {
+        width: 40%;
+    }
+}
+// box-shadow: $boxShadow;
 
 .product {
     display: flex;
@@ -207,11 +284,18 @@ body {
 
         &_img {
             width: 100%;
+            position: relative;
+
+            &:hover .card-hover {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
 
         &_title {
             @extend %fontProduct;
-            color: #222;
+            color: $colorStyleHeaderPromoFooter;
             font-size: 13px;
             font-weight: 400;
             margin-top: 25px;
@@ -236,6 +320,34 @@ body {
             margin-bottom: 20px;
             padding-left: 18px;
         }
+
+        .card-hover {
+            position: absolute;
+            background: rgba(58, 56, 56, 0.86);
+            cursor: pointer;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            &-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 11px;
+                padding: 12px;
+                width: 35%;
+                border: 1px solid #FFFFFF;
+
+                &-text {
+                    color: #FFF;
+                    font-size: 14px;
+                    font-weight: 400;
+                    @extend %fontProduct;
+                }
+            }
+        }
     }
 }
 
@@ -243,19 +355,25 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 95px;
-}
 
-.button_AllProduct {
-    border: solid 1px;
-    padding: 15px 40px;
-    color: #F26376;
-    font-size: 16px;
-    font-weight: 400;
-    @extend %fontProduct;
+    &_button {
+        border: solid 1px $ColorSelectSite;
+        padding: 15px 40px;
+        background-color: #FFF;
+        font-size: 16px;
+        font-weight: 400;
+        @extend %fontProduct;
+        color: $ColorSelectSite;
+
+        &:hover {
+            background-color: $ColorSelectSite;
+            color: #FFF;
+        }
+    }
 }
 
 .promo {
-    background: #222224;
+    background: $colorStyleHeaderPromoFooter;
     padding-top: 104px;
     padding-bottom: 104px;
     display: flex;
@@ -343,7 +461,7 @@ body {
 
     &_text {
         text-align: center;
-        color: #222224;
+        color: $colorStyleHeaderPromoFooter;
         font-size: 20px;
         font-weight: 400;
         @extend %fontProduct;
@@ -359,7 +477,7 @@ body {
 
     &_big {
         text-align: center;
-        color: #222224;
+        color: $colorStyleHeaderPromoFooter;
         text-align: center;
         font-size: 24px;
         font-family: Lato;
@@ -372,7 +490,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        color: #222224;
+        color: $colorStyleHeaderPromoFooter;
         font-family: Lato;
         font-size: 18px;
         font-style: normal;
@@ -381,7 +499,7 @@ body {
     }
 
     &_forma {
-        color: #222224;
+        color: $colorStyleHeaderPromoFooter;
         font-size: 14px;
         font-weight: 400;
         @extend %fontProduct;
@@ -404,51 +522,6 @@ body {
             text-align: center;
             font-size: 14px;
             font-weight: 400;
-            @extend %fontProduct;
-        }
-    }
-}
-
-.page_heading {
-    display: flex;
-    justify-content: space-between;
-    background-color: #F8F3F4;
-
-    &_title {
-        margin: 60px 0;
-        color: $ColorSelectSite;
-        @extend %fontProduct;
-        font-weight: 400;
-        font-size: 24px;
-    }
-
-    &_breadCrumbs {
-        margin: 66px 0;
-
-        &_text {
-            color: #636363;
-            @extend %fontProduct;
-            font-size: 14px;
-            font-weight: 300;
-
-            /* Добавление делителя через CSS, через псевдо классы */
-            // &::after {
-            //     content: " /";
-            // }
-
-            // &:last-child::after {
-            //     content: " ";
-            // }
-
-            /* Объединение двух правил выше в одно */
-            &:not(:last-child)::after {
-                content: " /";
-            }
-        }
-
-        .unic {
-            color: $ColorSelectSite;
-            font-weight: 700;
             @extend %fontProduct;
         }
     }
@@ -641,7 +714,6 @@ body {
 
                 @include flexColumn(16px);
                 padding-top: 18px;
-                padding-left: 20px;
 
                 &[open] {
                     color: $ColorSelectSite;
@@ -671,9 +743,9 @@ body {
             }
         }
 
-        &-box:hover {
-            color: $ColorSelectSite;
-        }
+        // &-box:hover {
+        //     color: $ColorSelectSite;
+        // }
 
         &-box {
             position: relative;
@@ -684,26 +756,36 @@ body {
 
             &-details {
 
+
+
                 &-summary {
                     padding-left: 5px;
                     padding-bottom: 2px;
+
+                    &:hover {
+                        color: $ColorSelectSite;
+                    }
                 }
 
                 &-pre_part {
                     position: absolute;
-                    padding: 6px;
-                    background: $backgroundGeneral;
+                    padding: 9px;
+                    background: #FFFFFF;
                     box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
                     top: 22px;
-                    right: -7px;
+                    right: -20px;
                     z-index: 3;
+                    display: flex;
+                    gap: 6px;
+                    width: 60px;
+                    flex-direction: column;
+                    justify-content: center;
                 }
 
                 &-part {
                     display: flex;
                     flex-direction: row;
                     gap: 9px;
-                    margin: 9px;
                 }
             }
         }

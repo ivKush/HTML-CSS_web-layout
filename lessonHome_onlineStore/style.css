@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category-summary, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .page_heading_breadCrumbs .unic, .page_heading_breadCrumbs_text, .page_heading_title, .subscribe_forma_text, .subscribe_forma, .subscribe_text, .promo_text, .promo_title, .button_AllProduct, .product_card_price, .product_card_text, .product_card_title, .product_heding_text, .product_heding_h1, .nav_box_text_big, .nav_box_text, .main_heading_h2, .main_heading_h1, .menu-option-elem-text, .menu-option-elem, .menu-option, .menu, .footer_left_text {
+.filter-items-box, .filter-items-category-subcategory-elements-el, .filter-items-category-subcategory, .filter-items-category-summary, .filter-items-category[open], .currentProduct-option, .currentProduct-price, .currentProduct-text, .currentProduct-name, .currentProduct-title, .subscribe_forma_text, .subscribe_forma, .subscribe_text, .promo_text, .promo_title, .product_btn_button, .product_card .card-hover-wrap-text, .product_card_price, .product_card_text, .product_card_title, .cart-heading-text, .page_heading_breadCrumbs .unic, .page_heading_breadCrumbs_text, .page_heading_title, .product_heding_text, .product_heding_h1, .nav_box_text_big, .nav_box_text, .main_heading_h2, .main_heading_h1, .menu-option-elem-text, .menu-option-elem, .menu-option, .menu, .footer_left_text {
   font-family: Lato;
   font-style: normal;
   line-height: normal;
@@ -63,6 +63,9 @@
   position: relative;
 }
 .BoorgerMenu-summary path:hover {
+  fill: #F16D7F;
+}
+.BoorgerMenu[open] path {
   fill: #F16D7F;
 }
 
@@ -266,6 +269,61 @@ body {
   font-size: 14px;
 }
 
+.page_heading {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F8F3F4;
+}
+.page_heading_title {
+  margin: 60px 0;
+  color: #F16D7F;
+  font-weight: 400;
+  font-size: 24px;
+}
+.page_heading_breadCrumbs {
+  margin: 66px 0;
+}
+.page_heading_breadCrumbs_text {
+  color: #636363;
+  font-size: 14px;
+  font-weight: 300;
+  /* Добавление делителя через CSS, через псевдо классы */
+  /* Объединение двух правил выше в одно */
+}
+.page_heading_breadCrumbs_text:not(:last-child)::after {
+  content: " /";
+}
+.page_heading_breadCrumbs .unic {
+  color: #F16D7F;
+  font-weight: 700;
+}
+
+.cart-heading {
+  background-color: #F8F3F4;
+}
+.cart-heading-text {
+  padding: 60px 0;
+  color: #F16D7F;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.cart {
+  padding-top: 96px;
+  padding-bottom: 128px;
+  display: flex;
+  gap: 128px;
+}
+.cart-left {
+  width: 64.5%;
+}
+.cart-rigth {
+  width: 35.5%;
+}
+.cart-imgBox {
+  width: 40%;
+}
+
 .product {
   display: flex;
   flex-wrap: wrap;
@@ -278,6 +336,12 @@ body {
 }
 .product_card_img {
   width: 100%;
+  position: relative;
+}
+.product_card_img:hover .card-hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .product_card_title {
   color: #222;
@@ -301,23 +365,51 @@ body {
   margin-bottom: 20px;
   padding-left: 18px;
 }
+.product_card .card-hover {
+  position: absolute;
+  background: rgba(58, 56, 56, 0.86);
+  cursor: pointer;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.product_card .card-hover-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  padding: 12px;
+  width: 35%;
+  border: 1px solid #FFFFFF;
+}
+.product_card .card-hover-wrap-text {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+}
 
 .product_btn {
   display: flex;
   justify-content: center;
   margin-bottom: 95px;
 }
-
-.button_AllProduct {
-  border: solid 1px;
+.product_btn_button {
+  border: solid 1px #F16D7F;
   padding: 15px 40px;
-  color: #F26376;
+  background-color: #FFF;
   font-size: 16px;
   font-weight: 400;
+  color: #F16D7F;
+}
+.product_btn_button:hover {
+  background-color: #F16D7F;
+  color: #FFF;
 }
 
 .promo {
-  background: #222224;
+  background: #222;
   padding-top: 104px;
   padding-bottom: 104px;
   display: flex;
@@ -389,7 +481,7 @@ body {
 }
 .subscribe_text {
   text-align: center;
-  color: #222224;
+  color: #222;
   font-size: 20px;
   font-weight: 400;
 }
@@ -403,7 +495,7 @@ body {
 }
 .subscribe_big {
   text-align: center;
-  color: #222224;
+  color: #222;
   text-align: center;
   font-size: 24px;
   font-family: Lato;
@@ -415,7 +507,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #222224;
+  color: #222;
   font-family: Lato;
   font-size: 18px;
   font-style: normal;
@@ -423,7 +515,7 @@ body {
   line-height: 167.2%;
 }
 .subscribe_forma {
-  color: #222224;
+  color: #222;
   font-size: 14px;
   font-weight: 400;
   display: flex;
@@ -443,35 +535,6 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
-}
-
-.page_heading {
-  display: flex;
-  justify-content: space-between;
-  background-color: #F8F3F4;
-}
-.page_heading_title {
-  margin: 60px 0;
-  color: #F16D7F;
-  font-weight: 400;
-  font-size: 24px;
-}
-.page_heading_breadCrumbs {
-  margin: 66px 0;
-}
-.page_heading_breadCrumbs_text {
-  color: #636363;
-  font-size: 14px;
-  font-weight: 300;
-  /* Добавление делителя через CSS, через псевдо классы */
-  /* Объединение двух правил выше в одно */
-}
-.page_heading_breadCrumbs_text:not(:last-child)::after {
-  content: " /";
-}
-.page_heading_breadCrumbs .unic {
-  color: #F16D7F;
-  font-weight: 700;
 }
 
 .carusel {
@@ -634,7 +697,6 @@ body {
   flex-direction: column;
   gap: 16px;
   padding-top: 18px;
-  padding-left: 20px;
 }
 .filter-items-category-subcategory[open] {
   color: #F16D7F;
@@ -658,9 +720,6 @@ body {
 .filter-items-category-subcategory-elements-el:hover {
   color: #F16D7F;
 }
-.filter-items-box:hover {
-  color: #F16D7F;
-}
 .filter-items-box {
   position: relative;
   color: #6F6E6E;
@@ -671,18 +730,25 @@ body {
   padding-left: 5px;
   padding-bottom: 2px;
 }
+.filter-items-box-details-summary:hover {
+  color: #F16D7F;
+}
 .filter-items-box-details-pre_part {
   position: absolute;
-  padding: 6px;
+  padding: 9px;
   background: #FFFFFF;
   box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
   top: 22px;
-  right: -7px;
+  right: -20px;
   z-index: 3;
+  display: flex;
+  gap: 6px;
+  width: 60px;
+  flex-direction: column;
+  justify-content: center;
 }
 .filter-items-box-details-part {
   display: flex;
   flex-direction: row;
   gap: 9px;
-  margin: 9px;
 }/*# sourceMappingURL=style.css.map */

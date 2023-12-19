@@ -6,6 +6,10 @@
 
     &-summary path:hover {
         // content: url(icon/iconMenuPink.svg);
+        fill: $ColorSelectSite;                
+    }
+
+    &[open] path{
         fill: $ColorSelectSite;
     }
 }
