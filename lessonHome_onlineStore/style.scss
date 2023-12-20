@@ -258,18 +258,195 @@ body {
     display: flex;
     gap: 128px;
 
-    &-left {
-        width: 64.5%;
+    .cartPrice {
+        color: $ColorSelectSite;
     }
 
-    &-rigth {
-        width: 35.5%;
+    &-left {
+        width: 58%;
+
+        &-cards {
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+            margin-bottom: 40px;
+        }
+
+        &-specification {
+
+            padding-top: 22px;
+            padding-right: 22px;
+
+            &-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 42px;
+                color: $colorStyleHeaderPromoFooter;
+                font-size: 24px;
+                font-weight: 400;
+                @extend %fontProduct;
+
+                &-cross {
+                    margin-left: 125px;
+
+                    &:hover path {
+                        fill: $ColorSelectSite;
+                    }
+                }
+            }
+
+            &-parameters {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                margin-bottom: 6px;
+                color: $colorText;
+                font-size: 22px;
+                font-weight: 400;
+                @extend %fontProduct;
+            }
+
+
+            &-inputBox {
+                display: flex;
+                gap: 24px;
+
+                color: $colorText;
+                font-size: 22px;
+                font-weight: 400;
+                @extend %fontProduct;
+
+                &-input {
+                    width: 44px;
+                    color: $colorText;
+                    font-size: 18px;
+                    font-weight: 400;
+                    @extend %fontProduct;
+                    text-align: center;
+                }
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 32px;
+            font-size: 14px;
+            font-weight: 300;
+            @extend %fontProduct;
+
+            &-btn {
+                padding: 16px 40px;
+                background-color: #FFF;
+                color: #A4A4A4;
+                border: 1px solid #A4A4A4;
+
+                &:hover {
+                    background-color: $ColorSelectSite;
+                    color: #FFF;
+                }
+            }
+        }
     }
 
     &-imgBox {
         width: 40%;
     }
+
+    &-rigth {
+        width: 32%;
+
+        &-delivery {
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+            color: #222;
+            font-size: 13px;
+            font-weight: 300;
+            @extend %fontProduct;
+            margin-bottom: 57px;
+
+            &>p {
+                font-size: 16px;
+            }
+
+            &>input {
+                padding: 15px;
+            }
+
+            &-btn {
+                width: 28%;
+                padding: 10px 15px;
+                box-sizing: content-box;
+                background-color: #FFF;
+                color: #A4A4A4;
+                border: 1px solid #A4A4A4;
+                font-size: 11px;
+                font-weight: 300;
+                @extend %fontProduct;
+
+                &:hover {
+                    background-color: $ColorSelectSite;
+                    color: #FFF;
+                }
+            }
+        }
+
+        &-total {
+            background-color: #F5F3F3;
+            padding-right: 34px;
+            padding-left: 51px;
+
+            &-summ {
+                color: #4A4A4A;
+                font-size: 11px;
+                font-weight: 400;
+                @extend %fontProduct;
+                padding-bottom: 21px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #E2E2E2;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 12px;
+                padding-top: 39px;
+            }
+
+            &-btn {
+                padding: 15px 42px;
+                background-color: $ColorSelectSite;
+                color: #FFF;
+                margin-bottom: 42px;
+
+                &:hover {
+                    background-color: #FFF;
+                    color: $ColorSelectSite;
+                    // box-shadow: 3px 1px 6px rgba(241, 109, 127, 0.25);
+                    filter: drop-shadow(3px 1px 6px rgba(241, 109, 127, 0.25));
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .text_fz11px_fw400 {
+        color: $colorStyleHeaderPromoFooter;
+        font-size: 11px;
+        font-weight: 400;
+        @extend %fontProduct;
+        display: flex;
+        gap: 20px;
+    }
+
+    .text_fz16px_fw300 {
+        color: $colorStyleHeaderPromoFooter;
+        font-size: 16px;
+        font-weight: 300;
+        @extend %fontProduct;
+    }
 }
+
 // box-shadow: $boxShadow;
 
 .product {
