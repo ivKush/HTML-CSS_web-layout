@@ -1,75 +1,11 @@
 @import "vars";
 @import "mixins";
 @import "extends"; // ??? при каждом импорте в папки добавляются/дублируются селекторы наследования в CSS ???
+@import "base";
 @import "header";
 @import "footer";
 @import "boorgerMenu";
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-// Замена оптимизатору или (👆)общему обнулению - от преподавателя.
-// сломал страницу - причину не искал
-/*
-html,
-body,
-div,
-img,
-a,
-hr,
-table,
-tr,
-td,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-select,
-textarea,
-button {
-    box-sizing: border-box;
-    border: none;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-    outline: none;
-    vertical-align: top;
-    transition: none;
-}
-*/
-
-a {
-    text-decoration: none;
-}
-
-details {
-    cursor: pointer;
-}
-
-summary {
-    display: block;
-}
-
-summary::-webkit-details-marker {
-    display: none;
-}
-
-a:hover {
-    opacity: 0.6;
-}
-
-body {
-    font-family: 'Lato', sans-serif;
-}
+@import "subscribe";
 
 .centering {
     @include centering($widthSiteDesctop);
@@ -241,6 +177,18 @@ body {
 }
 
 .cart-heading {
+    background-color: #F8F3F4;
+
+    &-text {
+        padding: 60px 0;
+        color: $ColorSelectSite;
+        font-size: 24px;
+        font-weight: 400;
+        @extend %fontProduct;
+    }
+}
+
+.registration-heading {
     background-color: #F8F3F4;
 
     &-text {
@@ -447,7 +395,109 @@ body {
     }
 }
 
-// box-shadow: $boxShadow;
+.regisration {
+    &-wraper {
+        display: flex;
+        gap: 128px;
+    }
+
+    &-profile {
+        padding-top: 64px;
+        padding-bottom: 96px;
+
+        &-form {
+            @include flexColumn(20px);
+            color: #B1B1B1;
+            font-size: 13px;
+            font-weight: 300;
+            @extend %fontProduct;
+            
+            &-title {
+                color: $colorStyleHeaderPromoFooter;
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            &-input {
+                padding: 14px;
+                color: #B1B1B1;
+                font-size: 13px;
+                font-weight: 300;
+                font-family: Lato;
+                @extend %fontProduct;
+                outline: none;
+            }
+
+            &-text {
+                padding-top: -5px;
+            }
+        }
+
+        &-formSex {
+            display: flex;
+            gap: 25px;
+            margin: 35px 0;
+
+            &-label {
+                display: flex;
+                gap: 12px;
+
+                &>input {
+                    content: url(icon/emptyCircle.svg);
+                    width: 20px;
+                }
+
+                &>input:active {
+                    background-image: url(icon/roseCircle.svg);
+                    background-size: cover;
+                    width: 20px;
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        &-btn {
+            margin-top: 39px;
+            padding: 16px 29px;
+            background-color: $ColorSelectSite;
+            color: $backgroundGeneral;
+            border: none;
+
+            &:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+        }
+
+        &-btnIcon {
+            content: url(icon/arrow_right.svg);
+            margin-left: 20px;
+        }
+    }
+
+
+    &-banerPromo {
+        color: $colorStyleHeaderPromoFooter;
+        font-size: 24px;
+        font-weight: 300;
+        @extend %fontProduct;
+        padding-top: 64px;
+
+        &-title {
+            padding-bottom: 21px;
+        }
+
+        &-checkIcon {
+            content: url(icon/checkMark.svg);
+            margin-right: 23px;
+        }
+
+        &-text {
+            padding-bottom: 16px;
+        }
+    }
+}
 
 .product {
     display: flex;
@@ -605,104 +655,7 @@ body {
 }
 */
 
-.subscribe {
-    // position: absolute;
 
-    background-image: linear-gradient(to bottom, rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), $subscribeBackground;
-
-    /*
-    // Создание фона путем наложения двух img в backgraund-е                   
-    
-    background-image: url(img/Subscribe_backgraund1.png),
-        url(img/subscribeBackground.png);
-    */
-
-    background-size: cover;
-    background-position: bottom;
-
-    display: flex;
-    gap: 223px;
-    padding-top: 97px;
-    padding-bottom: 126px;
-
-    &_left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 40%;
-    }
-
-    &_img {
-        margin-bottom: 30px;
-    }
-
-    &_text {
-        text-align: center;
-        color: $colorStyleHeaderPromoFooter;
-        font-size: 20px;
-        font-weight: 400;
-        @extend %fontProduct;
-    }
-
-    &_right {
-        @include flexColumn(32px);
-        justify-content: flex-end;
-        width: 60%;
-        align-items: center;
-
-    }
-
-    &_big {
-        text-align: center;
-        color: $colorStyleHeaderPromoFooter;
-        text-align: center;
-        font-size: 24px;
-        font-family: Lato;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 167.2%;
-    }
-
-    &_title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: $colorStyleHeaderPromoFooter;
-        font-family: Lato;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 167.2%;
-    }
-
-    &_forma {
-        color: $colorStyleHeaderPromoFooter;
-        font-size: 14px;
-        font-weight: 400;
-        @extend %fontProduct;
-
-        display: flex;
-        justify-content: center;
-
-        &_infield {
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-            padding: 20px;
-        }
-
-        &_text {
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-            padding: 20px;
-            background: $ColorSelectSite;
-            color: $backgroundGeneral;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 400;
-            @extend %fontProduct;
-        }
-    }
-}
 
 .carusel {
     display: flex;

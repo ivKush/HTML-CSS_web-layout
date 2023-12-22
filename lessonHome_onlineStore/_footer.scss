@@ -9,7 +9,7 @@
     padding-bottom: 24px;
 
     &_left_text {
-        color: #FBFBFB;
+        color: $backgroundGeneral;
         font-size: 16px;
         font-weight: 400;
         @extend %fontProduct
@@ -21,10 +21,15 @@
         padding: 8px;
 
         &_icon {
-            border: solid;
             padding: 8px;
-            background: #FFF;
-            color: #222;
+            background: $backgroundGeneral;
+            color: $colorStyleHeaderPromoFooter;
+
+            &:hover {
+                background-color: $ColorSelectSite;
+                color: $backgroundGeneral;
+                opacity: 1;
+            }
         }
     }
 }
