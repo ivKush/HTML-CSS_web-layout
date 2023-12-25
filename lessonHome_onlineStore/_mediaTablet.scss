@@ -1,0 +1,111 @@
+@import "vars";
+
+@media (max-width: 1139px) {
+    .centering {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .headNav {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .carusel {
+        padding-left: 0;
+        padding-right: 0;
+
+        &_item_img_product {
+            width: 80%;
+        }
+    }
+
+    .offer {
+        padding-left: 0;
+        padding-right: 0;
+        bottom: 0;
+    }
+
+    .currentProduct {
+        &-text {
+            padding: 0 108px;
+        }
+    }
+
+    .otherProduct {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        gap: 16px;
+        justify-content: center;
+
+        &_hidden {
+            position: absolute;
+            z-index: -3;
+            left: -1000px;
+        }
+    }
+
+    .cart {
+        display: block;
+        padding-top: 59px;
+
+        &-left {
+            width: 100%;
+            margin-bottom: 64px;
+
+            &-buttons {
+                justify-content: space-evenly;
+            }
+        }
+
+        &-right {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            justify-content: space-between;
+
+            &-delivery {
+                gap: 15px;
+                width: 100%;
+                margin-bottom: 0;
+            }
+
+            &-total {
+                width: 100%;
+                margin-top: 40px;
+                padding-left: 12%;
+                margin-bottom: 16px;
+
+                &-btn {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .subscribe {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        padding-top: 64px;
+        padding-bottom: 140px;
+
+        &_left {
+            width: 47%;
+        }
+    }
+
+    .regisration {
+        &-profile {
+            padding-top: 40px;
+
+            &-form {
+                max-width: 450px;
+            }
+        }
+
+        &-banerPromo {
+            padding-top: 40px;
+        }
+    }
+}

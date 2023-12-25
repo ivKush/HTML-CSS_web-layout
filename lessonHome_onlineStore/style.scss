@@ -7,8 +7,12 @@
 @import "boorgerMenu";
 @import "subscribe";
 
+
+
 .centering {
-    @include centering($widthSiteDesctop);
+    padding-left: calc(50% - $widthSiteDesctop/2);
+    padding-right: calc(50% - $widthSiteDesctop/2);
+    box-sizing: border-box;
 }
 
 .main {
@@ -214,8 +218,10 @@
         width: 58%;
 
         &-cards {
+            position: relative;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
+            gap: 31px;
             box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
             margin-bottom: 40px;
         }
@@ -236,7 +242,9 @@
                 @extend %fontProduct;
 
                 &-cross {
-                    margin-left: 125px;
+                    position: absolute;
+                    right: 22px;
+                    z-index: 3;
 
                     &:hover path {
                         fill: $ColorSelectSite;
@@ -302,7 +310,7 @@
         width: 40%;
     }
 
-    &-rigth {
+    &-right {
         width: 32%;
 
         &-delivery {
@@ -366,6 +374,7 @@
                 background-color: $ColorSelectSite;
                 color: #FFF;
                 margin-bottom: 42px;
+                border: none;
 
                 &:hover {
                     background-color: #FFF;
@@ -398,10 +407,11 @@
 .regisration {
     &-wraper {
         display: flex;
-        gap: 128px;
+        justify-content: space-between;
     }
 
     &-profile {
+        width: calc(359px / $widthSiteDesctop * 100%);
         padding-top: 64px;
         padding-bottom: 96px;
 
@@ -478,6 +488,7 @@
 
 
     &-banerPromo {
+        width: calc(652px / $widthSiteDesctop * 100%);
         color: $colorStyleHeaderPromoFooter;
         font-size: 24px;
         font-weight: 300;
@@ -693,7 +704,7 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 128px;
-    margin-bottom: 80px;
+    margin-bottom: 128px;
 }
 
 .currentProduct {
@@ -716,7 +727,7 @@
         margin-top: 12px;
         margin-bottom: 48px;
         color: #4D4D4D;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 300;
         @extend %fontProduct;
     }
@@ -724,7 +735,6 @@
     &-text {
         padding: 0 293px;
         margin-bottom: 32px;
-
         color: #5E5E5E;
         text-align: center;
         font-size: 14px;
@@ -764,6 +774,7 @@
         align-items: center;
         gap: 10px;
         color: #F26376;
+        border-style: solid;
     }
 
     &-button:hover {
@@ -921,3 +932,7 @@
         }
     }
 }
+
+@import "mediaTablet";
+
+@import "mediaIPhone_11";
