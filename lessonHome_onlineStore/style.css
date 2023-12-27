@@ -809,14 +809,6 @@ summary::-webkit-details-marker {
   z-index: 2;
 }
 
-.otherProduct {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 128px;
-  margin-bottom: 128px;
-}
-
 .currentProduct {
   display: flex;
   flex-direction: column;
@@ -878,6 +870,14 @@ summary::-webkit-details-marker {
 .currentProduct-button:hover {
   background-color: rgba(241, 109, 127, 0.4);
   color: #FFFFFF;
+}
+
+.otherProduct {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 128px;
+  margin-bottom: 128px;
 }
 
 .filter {
@@ -1007,6 +1007,21 @@ summary::-webkit-details-marker {
     margin-left: 16px;
     margin-right: 16px;
   }
+  .product {
+    justify-content: center;
+    gap: 16px;
+  }
+  .promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+  .promo_box {
+    width: 360px;
+  }
   .carusel {
     padding-left: 0;
     padding-right: 0;
@@ -1028,7 +1043,7 @@ summary::-webkit-details-marker {
     gap: 16px;
     justify-content: center;
   }
-  .otherProduct_hidden {
+  .hidden {
     position: absolute;
     z-index: -3;
     left: -1000px;
@@ -1107,6 +1122,40 @@ summary::-webkit-details-marker {
   .headNav_right_basket_num {
     position: absolute;
     z-index: -3;
+  }
+  .page_heading {
+    flex-direction: column;
+    align-items: center;
+  }
+  .page_heading_title {
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  .page_heading_breadCrumbs {
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+  .currentProduct-name {
+    margin-bottom: 32px;
+  }
+  .currentProduct-text {
+    margin-bottom: 32px;
+    padding: 0 22px;
+  }
+  .currentProduct-price {
+    margin-bottom: 32px;
+  }
+  .currentProduct-option {
+    margin-top: 48px;
+    margin-bottom: 64px;
+    padding-left: 29px;
+    padding-right: 29px;
+    font-size: 10px;
+  }
+  .otherProduct {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    gap: 0;
   }
   .cart-heading {
     text-align: center;

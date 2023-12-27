@@ -7,8 +7,6 @@
 @import "boorgerMenu";
 @import "subscribe";
 
-
-
 .centering {
     padding-left: calc(50% - $widthSiteDesctop/2);
     padding-right: calc(50% - $widthSiteDesctop/2);
@@ -666,8 +664,6 @@
 }
 */
 
-
-
 .carusel {
     display: flex;
     justify-content: space-between;
@@ -697,14 +693,6 @@
     position: relative;
     bottom: 45px;
     z-index: 2;
-}
-
-.otherProduct {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 128px;
-    margin-bottom: 128px;
 }
 
 .currentProduct {
@@ -781,6 +769,14 @@
         background-color: rgba($color: $ColorSelectSite, $alpha: 0.4);
         color: $backgroundGeneral;
     }
+}
+
+.otherProduct {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 128px;
+    margin-bottom: 128px;
 }
 
 .filter {
@@ -934,5 +930,4 @@
 }
 
 @import "mediaTablet";
-
 @import "mediaIPhone_11";

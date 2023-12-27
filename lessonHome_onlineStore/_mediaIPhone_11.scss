@@ -30,6 +30,50 @@
         }
     }
 
+    .page_heading {
+        flex-direction: column;
+        align-items: center;
+
+        &_title {
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+
+        &_breadCrumbs {
+            margin-top: 0;
+            margin-bottom: 48px;
+        }
+    }
+
+    .currentProduct {
+        &-name {
+            margin-bottom: 32px;
+        }
+
+        &-text {
+            margin-bottom: 32px;
+            padding: 0 22px;
+        }
+
+        &-price {
+            margin-bottom: 32px;
+        }
+
+        &-option {
+            margin-top: 48px;
+            margin-bottom: 64px;
+            padding-left: 29px;
+            padding-right: 29px;
+            font-size: 10px;
+        }
+    }
+
+    .otherProduct {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        gap: 0;
+    }
+
     .cart-heading {
         text-align: center;
     }
@@ -119,7 +163,6 @@
             font-size: 16px;
         }
     }
-
 
     .subscribe {
         gap: 59px;
