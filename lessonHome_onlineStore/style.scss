@@ -84,7 +84,7 @@
         background-image: linear-gradient(rgba(33, 22, 22, 0.70), rgba(33, 22, 22, 0.70)), url(img/nav_women.jpg);
         width: 31.5%;
         height: 47%;
-       
+
     }
 
     &_center {
@@ -520,6 +520,9 @@
     &_card {
         max-width: calc(($widthSiteDesctop - 60px) / 3);
         background-color: #F8F8F8;
+        a:hover {
+            opacity: 0.6;
+        }
 
         &_img {
             width: 100%;

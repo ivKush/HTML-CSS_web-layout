@@ -51,10 +51,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  opacity: 0.6;
-}
-
 details {
   cursor: pointer;
 }
@@ -677,6 +673,9 @@ summary::-webkit-details-marker {
 .product_card {
   max-width: 360px;
   background-color: #F8F8F8;
+}
+.product_card a:hover {
+  opacity: 0.6;
 }
 .product_card_img {
   width: 100%;
