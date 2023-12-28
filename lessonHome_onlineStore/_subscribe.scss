@@ -1,6 +1,22 @@
 @import "vars";
 @import "mixins";
 
+/*
+// Создание фона используя напрямую img + позиции z-index
+
+.subscribeBackground {
+    position: relative;
+}
+
+.back_img {
+    position: absolute;
+}
+
+.back_transparent {
+    position: absolute;
+}
+*/
+
 .subscribe {
     // position: absolute;
 

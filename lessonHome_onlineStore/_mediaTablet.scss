@@ -12,6 +12,38 @@
         margin-right: 16px;
     }
 
+    .main {
+        &_img {
+            margin-left: 0;
+            width: 50%;
+        }
+
+        &_heading_h1 {
+            font-size: 44px;
+        }
+
+        &_heading_h2 {
+            font-size: 24px;
+        }
+    }
+
+    .nav_lists {
+        gap: 19px;
+        margin-bottom: 155px;
+    }
+
+    .product_heding {
+        margin-bottom: 72px;
+    }
+
+    .product {
+        margin-bottom: 32px;
+    }
+
+    .product_btn {
+        margin-bottom: 64px;
+    }
+
     .product {
         justify-content: center;
         gap: 16px;
@@ -56,12 +88,6 @@
         padding-right: 2vw;
         gap: 16px;
         justify-content: center;
-    }
-
-    .hidden {
-        position: absolute;
-        z-index: -3;
-        left: -1000px;
     }
 
     .cart {
@@ -126,5 +152,11 @@
         &-banerPromo {
             padding-top: 40px;
         }
+    }
+
+    .hidden {
+        position: absolute;
+        z-index: -3;
+        left: -1000px;
     }
 }
